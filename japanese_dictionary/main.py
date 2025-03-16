@@ -14,10 +14,12 @@ def search(text):
     else:
         return None
 
-
-if __name__ == "__main__":
+def main():
     word_info = search(input('Enter a word: '))
 
     if word_info:
         for entry in word_info:
             print(Word(entry))
+
+if __name__ == "__main__":
+    main()
