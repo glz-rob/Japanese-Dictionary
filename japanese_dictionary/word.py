@@ -5,6 +5,7 @@ TEST = {'slug': 'レモン', 'is_common': True, 'tags': [], 'jlpt': [], 'japanes
 
 # TODO: Change current implementation of this class
 
+
 class Word:
     """Model for a word entry from the Jisho API"""
 
@@ -32,9 +33,11 @@ class Word:
                 return_string += f'{entry['word']}'
             if entry.get('reading'):
                 return_string += f' ({entry['reading']})'
-            return_string += '\n'
 
         return return_string
+
+    def __repr__(self) -> str:
+        return self.word
 
 
 def main():
